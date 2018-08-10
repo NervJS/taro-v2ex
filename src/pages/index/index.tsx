@@ -1,37 +1,50 @@
 import Taro, { Component } from '@tarojs/taro'
-import { View, Button } from '@tarojs/components'
-import { connect } from '@tarojs/redux'
-
-import { add, minus, asyncAdd } from '../../actions/counter'
+import { View } from '@tarojs/components'
+import { ThreadList } from '../../components/thread_list'
+import { Thread } from '../../interfaces/thread'
+import api from '../../utils/api'
 
 import './index.css'
 
-@connect(({ counter }) => ({
-  counter
-}), (dispatch) => ({
-  add () {
-    dispatch(add())
-  },
-  dec () {
-    dispatch(minus())
-  },
-  asyncAdd () {
-    dispatch(asyncAdd())
-  }
-}))
-class Index extends Component {
+interface IState {
+  loading: boolean,
+  threads: Thread[]
+}
+
+class Index extends Component<{}, IState> {
   config = {
     navigationBarTitleText: '首页'
   }
 
+  state = {
+    loading: true,
+    threads: []
+  }
+
+  async componentDidMount () {
+    try {
+      const res = await Taro.request<Thread[]>({
+        url: api.getLatestTopic()
+      })
+      this.setState({
+        threads: res.data,
+        loading: false
+      })
+    } catch (error) {
+      Taro.showToast({
+        title: '载入远程数据错误'
+      })
+    }
+  }
+
   render () {
+    const { loading, threads } = this.state
     return (
       <View className='index'>
-        <Button className='add_btn' onClick={this.props.add}>+</Button>
-        <Button className='dec_btn' onClick={this.props.dec}>-</Button>
-        <Button className='dec_btn' onClick={this.props.asyncAdd}>async</Button>
-        <View>{this.props.counter.num}</View>
-        <View>Hello, World</View>
+        <ThreadList
+          threads={threads}
+          loading={loading}
+        />
       </View>
     )
   }

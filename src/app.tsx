@@ -1,14 +1,9 @@
 import Taro, { Component } from '@tarojs/taro'
 import '@tarojs/async-await'
-import { Provider } from '@tarojs/redux'
 
 import Index from './pages/index'
 
-import configStore from './store'
-
 import './app.css'
-
-const store = configStore()
 
 class App extends Component {
   config = {
@@ -18,16 +13,14 @@ class App extends Component {
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
+      navigationBarTitleText: 'V2EX',
       navigationBarTextStyle: 'black'
     }
   }
 
   render () {
     return (
-      <Provider store={store}>
-        <Index />
-      </Provider>
+      <Index />
     )
   }
 }
