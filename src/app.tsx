@@ -10,7 +10,8 @@ class App extends Component {
     pages: [
       'pages/index/index',
       'pages/nodes/nodes',
-      'pages/hot/hot'
+      'pages/hot/hot',
+      'pages/node_detail/node_detail'
     ],
     tabBar: {
       list: [{

@@ -1,6 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
-import { View, Text, Button } from '@tarojs/components'
+import { View, Text, Navigator } from '@tarojs/components'
 import allNodes from './all_node'
+import api from '../../utils/api'
 
 import './nodes.css'
 
@@ -13,9 +14,15 @@ class Nodes extends Component<{}, {}> {
     const element = allNodes.map(item => {
       const nodes = item.nodes.map(node => {
         return (
-          <Text className='tag' key={node.full_name}>
-            {node.full_name}
-          </Text>
+          <Navigator
+            className='tag'
+            url={`/pages/node_detail/node_detail${api.queryString(node)}`}
+            key={node.full_name}
+          >
+            <Text>
+              {node.full_name}
+            </Text>
+          </Navigator>
         )
       })
       return (

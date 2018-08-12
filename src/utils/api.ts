@@ -21,7 +21,7 @@ const GET_REPLIES = 'replies/show.json'
 // 获取用户信息
 const GET_USERINFO = 'members/show.json'
 
-function _obj2uri (obj) {
+function queryString (obj?: Object) {
   if (!obj) {
     return ''
   }
@@ -35,7 +35,7 @@ function getAllNode () {
 }
 
 function getNodeInfo (o?) {
-  return HOST_URI + NODE_INFO + _obj2uri(o)
+  return HOST_URI + NODE_INFO + queryString(o)
 }
 
 function getHotNodes () {
@@ -43,11 +43,15 @@ function getHotNodes () {
 }
 
 function getLatestTopic (o?) {
-  return HOST_URI + LATEST_TOPIC + _obj2uri(o)
+  return HOST_URI + LATEST_TOPIC + queryString(o)
 }
 
 function getReplies (o?) {
-  return HOST_URI + GET_REPLIES + _obj2uri(o)
+  return HOST_URI + GET_REPLIES + queryString(o)
+}
+
+function getTopics (o?) {
+  return HOST_URI + GET_TOPICS + queryString(o)
 }
 
 export default {
@@ -55,5 +59,7 @@ export default {
   getNodeInfo,
   getLatestTopic,
   getReplies,
-  getHotNodes
+  getHotNodes,
+  queryString,
+  getTopics
 }
