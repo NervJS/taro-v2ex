@@ -11,9 +11,9 @@ interface IState {
   threads: IThread[]
 }
 
-class Index extends Component<{}, IState> {
+class Hot extends Component<{}, IState> {
   config = {
-    navigationBarTitleText: '首页'
+    navigationBarTitleText: '热门'
   }
 
   state = {
@@ -24,7 +24,7 @@ class Index extends Component<{}, IState> {
   async componentDidMount () {
     try {
       const res = await Taro.request<IThread[]>({
-        url: api.getLatestTopic()
+        url: api.getHotNodes()
       })
       this.setState({
         threads: res.data,
@@ -50,4 +50,4 @@ class Index extends Component<{}, IState> {
   }
 }
 
-export default Index
+export default Hot

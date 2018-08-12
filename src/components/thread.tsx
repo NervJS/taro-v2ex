@@ -1,16 +1,16 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Text, Navigator, Image } from '@tarojs/components'
 
-import { Member } from '../interfaces/member'
-import { Node } from '../interfaces/node'
+import { IMember } from '../interfaces/member'
+import { INode } from '../interfaces/node'
 import timeago from 'timeago.js'
 
 import './thread.css'
 
 interface IProps {
   title: string,
-  member: Member,
-  node: Node,
+  member: IMember,
+  node: INode,
   last_modified: number,
   id: number,
   replies: number

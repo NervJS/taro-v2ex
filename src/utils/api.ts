@@ -38,6 +38,10 @@ function getNodeInfo (o?) {
   return HOST_URI + NODE_INFO + _obj2uri(o)
 }
 
+function getHotNodes () {
+  return HOST_URI + HOT_TOPIC
+}
+
 function getLatestTopic (o?) {
   return HOST_URI + LATEST_TOPIC + _obj2uri(o)
 }
@@ -50,5 +54,6 @@ export default {
   getAllNode,
   getNodeInfo,
   getLatestTopic,
-  getReplies
+  getReplies,
+  getHotNodes
 }

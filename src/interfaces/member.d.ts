@@ -1,4 +1,4 @@
-export interface Member {
+export interface IMember {
   username: string;
   website?: null;
   github?: null;
