@@ -1,9 +1,10 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Text, Navigator, Image } from '@tarojs/components'
+import timeago from 'timeago.js'
 
+import api from '../utils/api'
 import { IMember } from '../interfaces/member'
 import { INode } from '../interfaces/node'
-import timeago from 'timeago.js'
 
 import './thread.css'
 
@@ -43,10 +44,11 @@ timeago.register('zh', betterChineseDict)
 
 class Thread extends Component<IProps, {}> {
   render () {
-    const { title, member, last_modified, replies, id, node } = this.props
+    const { title, member, last_modified, replies, node, id } = this.props
     const time = timeInst.format(last_modified * 1000, 'zh')
     return (
-      <View className='thread'>
+      <Navigator url={`/pages/thread_detail/thread_detail${api.queryString(this.props)}`}>
+        <View className='thread'>
         <View className='info'>
           <View>
             <Image src={member.avatar_large} className='avatar' />
@@ -74,6 +76,7 @@ class Thread extends Component<IProps, {}> {
           {title}
         </Text>
       </View>
+      </Navigator>
     )
   }
 }
