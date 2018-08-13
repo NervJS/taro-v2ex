@@ -12,10 +12,6 @@ interface IState {
 }
 
 class NodeDetail extends Component<{}, IState> {
-  config = {
-    navigationBarTitleText: '节点'
-  }
-
   state = {
     loading: true,
     threads: []

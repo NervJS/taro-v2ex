@@ -17,7 +17,10 @@
     "rootDir": ".",
     "jsx": "preserve",
     "jsxFactory": "Taro.createElement",
-    "allowJs": true
+    "allowJs": true,
+    "typeRoots": [
+      "node_modules/@types"
+   ]
   },
   "exclude": [
     "__tests__",
