@@ -1,8 +1,8 @@
-import Taro, { Component } from '@tarojs/taro'
+import Taro, { Component, eventCenter } from '@tarojs/taro'
 import { View, Text, Navigator, Image } from '@tarojs/components'
-import timeago from 'timeago.js'
 
 import api from '../utils/api'
+import { timeagoInst, Thread_DETAIL_NAVIGATE } from '../utils'
 import { IMember } from '../interfaces/member'
 import { INode } from '../interfaces/node'
 
@@ -13,48 +13,41 @@ interface IProps {
   member: IMember,
   node: INode,
   last_modified: number,
-  id: number,
-  replies: number
-  key?: number
+  tid: number,
+  replies: number,
+  key?: number,
+  not_navi?: boolean // 不导航到 detail
 }
-
-const timeInst = timeago()
-
-// 数字/英文与中文之间需要加空格
-const betterChineseDict = (_, index) => {
-  return [
-    ['刚刚', '片刻后'],
-    ['%s 秒前', '%s 秒后'],
-    ['1 分钟前', '1 分钟后'],
-    ['%s 分钟前', '%s 分钟后'],
-    ['1 小时前', '1小 时后'],
-    ['%s 小时前', '%s 小时后'],
-    ['1 天前', '1 天后'],
-    ['%s 天前', '%s 天后'],
-    ['1 周前', '1 周后'],
-    ['%s 周前', '%s 周后'],
-    ['1 月前', '1 月后'],
-    ['%s 月前', '%s 月后'],
-    ['1 年前', '1 年后'],
-    ['%s 年前', '%s 年后']
-  ][index]
-}
-
-timeago.register('zh', betterChineseDict)
 
 class Thread extends Component<IProps, {}> {
+
+  handleNavigate = () => {
+    // 这里必须显式指名 this.props 包含 tid
+    // 或设置 defaultProps
+    const { tid, not_navi } = this.props
+    if (not_navi) {
+      return
+    }
+    // 懒得用 redux 了
+    eventCenter.trigger(Thread_DETAIL_NAVIGATE, this.props)
+    Taro.navigateTo({
+      url: '/pages/thread_detail/thread_detail'
+    })
+  }
+
   render () {
-    const { title, member, last_modified, replies, node, id } = this.props
-    const time = timeInst.format(last_modified * 1000, 'zh')
+    const { title, member, last_modified, replies, node, not_navi } = this.props
+    const time = timeagoInst.format(last_modified * 1000, 'zh')
+    const usernameCls = `author ${not_navi ? 'bold' : ''}`
+
     return (
-      <Navigator url={`/pages/thread_detail/thread_detail${api.queryString(this.props)}`}>
-        <View className='thread'>
+      <View className='thread' onClick={this.handleNavigate}>
         <View className='info'>
           <View>
             <Image src={member.avatar_large} className='avatar' />
           </View>
           <View className='middle'>
-            <View className='author'>
+            <View className={usernameCls}>
                 {member.username}
             </View>
             <View className='replies'>
@@ -76,7 +69,6 @@ class Thread extends Component<IProps, {}> {
           {title}
         </Text>
       </View>
-      </Navigator>
     )
   }
 }

@@ -1,14 +1,18 @@
 import Taro, { Component } from '@tarojs/taro'
-import { View, RichText } from '@tarojs/components'
+import { View, RichText, Image } from '@tarojs/components'
 import { Thread } from '../../components/thread'
 import { Loading } from '../../components/loading'
 import { IThread } from '../../interfaces/thread'
 import api from '../../utils/api'
+import { timeagoInst, GlobalState, IThreadProps } from '../../utils'
+
+import './index.css'
 
 interface IState {
   loading: boolean
   replies: IThread[],
-  content: string
+  content: string,
+  thread: IThreadProps
 }
 
 interface URIComponent {
@@ -29,22 +33,39 @@ class ThreadDetail extends Component<{}, IState> {
   state = {
     loading: true,
     replies: [],
-    content: ''
+    content: '',
+    thread: {} as IThreadProps
   } as IState
 
   config = {
     navigationBarTitleText: '话题'
   }
+
+  componentWillMount () {
+    this.setState({
+      thread: GlobalState.thread
+    })
+  }
+
   async componentDidMount () {
-    const { id } = this.$router.params
     try {
-      const res = await Taro.request<IThread>({
-        url: api.getTopics({
-          id
+      const id = GlobalState.thread.tid
+      const [{ data }, { data: [ { content_rendered } ] } ] = await Promise.all([
+        Taro.request<IThread[]>({
+          url: api.getReplies({
+            'topic_id': id
+          })
+        }),
+        Taro.request<IThread[]>({
+          url: api.getTopics({
+            id
+          })
         })
-      })
+      ])
       this.setState({
-        content: res.data.content_rendered
+        loading: false,
+        replies: data,
+        content: content_rendered
       })
     } catch (error) {
       Taro.showToast({
@@ -54,16 +75,40 @@ class ThreadDetail extends Component<{}, IState> {
   }
 
   render () {
-    const thread = decodeObject(this.$router.params)
-    const { loading, replies, content } = this.state
+    const { loading, replies, thread, content } = this.state
 
-    const repliesEl = loading
+    const replieEl = replies.map((reply, index) => {
+      const time = timeagoInst.format(reply.last_modified * 1000, 'zh')
+      return (
+        <View className='reply' key={reply.id}>
+          <Image src={reply.member.avatar_large} className='avatar' />
+          <View className='main'>
+            <View className='author'>
+              {reply.member.username}
+            </View>
+            <View className='time'>
+              {time}
+            </View>
+            <RichText nodes={reply.content} className='content' />
+            <View className='floor'>
+              {index + 1} 楼
+            </View>
+          </View>
+        </View>
+      )
+    })
+
+    const contentEl = loading
       ? <Loading />
       : (
         <View>
-          <RichText nodes={content} />
+          <RichText nodes={content} className='main-content' />
+          <View className='replies'>
+            {replieEl}
+          </View>
         </View>
       )
+
     return (
       <View className='detail'>
         <Thread
@@ -71,10 +116,11 @@ class ThreadDetail extends Component<{}, IState> {
           title={thread.title}
           last_modified={thread.last_modified}
           replies={thread.replies}
-          id={thread.id}
+          tid={thread.id}
           member={thread.member}
+          not_navi={true}
         />
-        {repliesEl}
+        {contentEl}
       </View>
     )
   }

@@ -16,6 +16,11 @@
   font-size: 28px;
 }
 
+.bold {
+  font-size: 32px;
+  font-weight: bold;
+}
+
 .avatar {
   max-width: 65px;
   max-height: 65px;
