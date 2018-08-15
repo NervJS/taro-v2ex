@@ -1,5 +1,5 @@
 import Taro, { Component } from '@tarojs/taro'
-import { View } from '@tarojs/components'
+import { View, Text } from '@tarojs/components'
 import { Thread } from './thread'
 import { Loading } from './loading'
 import { IMember } from '../interfaces/member'

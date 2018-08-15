@@ -15,18 +15,16 @@ interface IState {
   thread: IThreadProps
 }
 
-interface URIComponent {
-  [key: string]: string
-}
+function prettyHTML (str: string) {
+  const lines = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']
 
-function decodeObject<T extends URIComponent> (obj: T): T {
-  for (const key in obj) {
-    if (obj.hasOwnProperty(key)) {
-      const element = obj[key]
-      obj[key] = decodeURI(element)
-    }
-  }
-  return obj
+  lines.forEach(line => {
+    const regex = new RegExp(`<${line}`, 'gi')
+
+    str = str.replace(regex, `<${line} class="line"`)
+  })
+
+  return str.replace(/<img/gi, '<img class="img"')
 }
 
 class ThreadDetail extends Component<{}, IState> {
@@ -65,7 +63,7 @@ class ThreadDetail extends Component<{}, IState> {
       this.setState({
         loading: false,
         replies: data,
-        content: content_rendered
+        content: prettyHTML(content_rendered)
       })
     } catch (error) {
       Taro.showToast({
@@ -102,7 +100,9 @@ class ThreadDetail extends Component<{}, IState> {
       ? <Loading />
       : (
         <View>
-          <RichText nodes={content} className='main-content' />
+          <View className='main-content'>
+            <RichText nodes={content} />
+          </View>
           <View className='replies'>
             {replieEl}
           </View>
