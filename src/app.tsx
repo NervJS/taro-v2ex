@@ -1,9 +1,11 @@
 import Taro, { Component } from '@tarojs/taro'
-import '@tarojs/async-await'
-
 import Index from './pages/index'
-
 import './app.css'
+
+// 支付宝小程序不需要引用 @tarojs/async-await
+if (Taro.getEnv() !== Taro.ENV_TYPE.ALIPAY) {
+  require('@tarojs/async-await')
+}
 
 class App extends Component {
   config = {
