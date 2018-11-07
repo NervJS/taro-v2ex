@@ -87,7 +87,10 @@ class ThreadDetail extends Component<{}, IState> {
             <View className='time'>
               {time}
             </View>
-            <RichText nodes={reply.content} className='content' />
+            {Taro.getEnv() === Taro.ENV_TYPE.ALIPAY
+            ? <View className='content'>{reply.content}</View>
+            : <RichText nodes={reply.content} className='content' />
+            }
             <View className='floor'>
               {index + 1} 楼
             </View>
@@ -101,7 +104,10 @@ class ThreadDetail extends Component<{}, IState> {
       : (
         <View>
           <View className='main-content'>
-            <RichText nodes={content} />
+          {Taro.getEnv() === Taro.ENV_TYPE.ALIPAY
+            ? <View>{content}</View>
+            : <RichText nodes={content} />
+          }
           </View>
           <View className='replies'>
             {replieEl}
