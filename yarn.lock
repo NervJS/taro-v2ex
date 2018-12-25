@@ -8,6 +8,12 @@
   dependencies:
     "@babel/highlight" "7.0.0-beta.44"
 
+"@babel/code-frame@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.0.0.tgz#06e2ab19bdb535385559aabb5ba59729482800f8"
+  dependencies:
+    "@babel/highlight" "^7.0.0"
+
 "@babel/code-frame@^7.0.0-beta.44":
   version "7.0.0-beta.55"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.0.0-beta.55.tgz#71f530e7b010af5eb7a7df7752f78921dd57e9ee"
@@ -24,6 +30,16 @@
     source-map "^0.5.0"
     trim-right "^1.0.1"
 
+"@babel/generator@^7.2.2":
+  version "7.2.2"
+  resolved "https://registry.npmjs.org/@babel/generator/-/generator-7.2.2.tgz#18c816c70962640eab42fe8cae5f3947a5c65ccc"
+  dependencies:
+    "@babel/types" "^7.2.2"
+    jsesc "^2.5.1"
+    lodash "^4.17.10"
+    source-map "^0.5.0"
+    trim-right "^1.0.1"
+
 "@babel/helper-function-name@7.0.0-beta.44":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/helper-function-name/-/helper-function-name-7.0.0-beta.44.tgz#e18552aaae2231100a6e485e03854bc3532d44dd"
@@ -32,17 +48,37 @@
     "@babel/template" "7.0.0-beta.44"
     "@babel/types" "7.0.0-beta.44"
 
+"@babel/helper-function-name@^7.1.0":
+  version "7.1.0"
+  resolved "https://registry.npmjs.org/@babel/helper-function-name/-/helper-function-name-7.1.0.tgz#a0ceb01685f73355d4360c1247f582bfafc8ff53"
+  dependencies:
+    "@babel/helper-get-function-arity" "^7.0.0"
+    "@babel/template" "^7.1.0"
+    "@babel/types" "^7.0.0"
+
 "@babel/helper-get-function-arity@7.0.0-beta.44":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/helper-get-function-arity/-/helper-get-function-arity-7.0.0-beta.44.tgz#d03ca6dd2b9f7b0b1e6b32c56c72836140db3a15"
   dependencies:
     "@babel/types" "7.0.0-beta.44"
 
+"@babel/helper-get-function-arity@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.npmjs.org/@babel/helper-get-function-arity/-/helper-get-function-arity-7.0.0.tgz#83572d4320e2a4657263734113c42868b64e49c3"
+  dependencies:
+    "@babel/types" "^7.0.0"
+
 "@babel/helper-split-export-declaration@7.0.0-beta.44":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/helper-split-export-declaration/-/helper-split-export-declaration-7.0.0-beta.44.tgz#c0b351735e0fbcb3822c8ad8db4e583b05ebd9dc"
   dependencies:
     "@babel/types" "7.0.0-beta.44"
+
+"@babel/helper-split-export-declaration@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.npmjs.org/@babel/helper-split-export-declaration/-/helper-split-export-declaration-7.0.0.tgz#3aae285c0311c2ab095d997b8c9a94cad547d813"
+  dependencies:
+    "@babel/types" "^7.0.0"
 
 "@babel/highlight@7.0.0-beta.44":
   version "7.0.0-beta.44"
@@ -60,6 +96,18 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
+"@babel/highlight@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.npmjs.org/@babel/highlight/-/highlight-7.0.0.tgz#f710c38c8d458e6dd9a201afb637fcb781ce99e4"
+  dependencies:
+    chalk "^2.0.0"
+    esutils "^2.0.2"
+    js-tokens "^4.0.0"
+
+"@babel/parser@^7.0.0", "@babel/parser@^7.2.2", "@babel/parser@^7.2.3":
+  version "7.2.3"
+  resolved "https://registry.npmjs.org/@babel/parser/-/parser-7.2.3.tgz#32f5df65744b70888d17872ec106b02434ba1489"
+
 "@babel/template@7.0.0-beta.44":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.0.0-beta.44.tgz#f8832f4fdcee5d59bf515e595fc5106c529b394f"
@@ -68,6 +116,14 @@
     "@babel/types" "7.0.0-beta.44"
     babylon "7.0.0-beta.44"
     lodash "^4.2.0"
+
+"@babel/template@^7.1.0":
+  version "7.2.2"
+  resolved "https://registry.npmjs.org/@babel/template/-/template-7.2.2.tgz#005b3fdf0ed96e88041330379e0da9a708eb2907"
+  dependencies:
+    "@babel/code-frame" "^7.0.0"
+    "@babel/parser" "^7.2.2"
+    "@babel/types" "^7.2.2"
 
 "@babel/traverse@7.0.0-beta.44":
   version "7.0.0-beta.44"
@@ -84,6 +140,20 @@
     invariant "^2.2.0"
     lodash "^4.2.0"
 
+"@babel/traverse@^7.0.0":
+  version "7.2.3"
+  resolved "https://registry.npmjs.org/@babel/traverse/-/traverse-7.2.3.tgz#7ff50cefa9c7c0bd2d81231fdac122f3957748d8"
+  dependencies:
+    "@babel/code-frame" "^7.0.0"
+    "@babel/generator" "^7.2.2"
+    "@babel/helper-function-name" "^7.1.0"
+    "@babel/helper-split-export-declaration" "^7.0.0"
+    "@babel/parser" "^7.2.3"
+    "@babel/types" "^7.2.2"
+    debug "^4.1.0"
+    globals "^11.1.0"
+    lodash "^4.17.10"
+
 "@babel/types@7.0.0-beta.44":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.0.0-beta.44.tgz#6b1b164591f77dec0a0342aca995f2d046b3a757"
@@ -92,22 +162,31 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
+"@babel/types@^7.0.0", "@babel/types@^7.2.2":
+  version "7.2.2"
+  resolved "https://registry.npmjs.org/@babel/types/-/types-7.2.2.tgz#44e10fc24e33af524488b716cdaee5360ea8ed1e"
+  dependencies:
+    esutils "^2.0.2"
+    lodash "^4.17.10"
+    to-fast-properties "^2.0.0"
+
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
 
-"@tarojs/async-await@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.npmjs.org/@tarojs/async-await/-/async-await-1.1.2.tgz#a8b787c22b7294d3d749fe6a496892277b7de1ff"
+"@tarojs/async-await@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/@tarojs/async-await/-/async-await-1.2.1.tgz#0d002ad27d8328242c1982ec5a9cb60f1ef5b2f1"
   dependencies:
     promise-polyfill "^7.1.2"
     regenerator-runtime "^0.11.1"
 
-"@tarojs/cli@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.npmjs.org/@tarojs/cli/-/cli-1.1.2.tgz#17e45cf4fd57a5291fa8e4985d82b7c6f55db5cb"
+"@tarojs/cli@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/@tarojs/cli/-/cli-1.2.1.tgz#37728bc76e627c71bbabe8bd38ad0c930c2f4075"
   dependencies:
-    "@tarojs/transformer-wx" "1.1.2"
+    "@tarojs/taroize" "1.2.1"
+    "@tarojs/transformer-wx" "1.2.1"
     autoprefixer "^8.4.1"
     babel-core "^6.26.3"
     babel-generator "^6.26.1"
@@ -115,19 +194,22 @@
     babel-plugin-remove-dead-code "^1.3.2"
     babel-plugin-transform-decorators-legacy "^1.3.4"
     babel-plugin-transform-define "^1.3.0"
-    babel-plugin-transform-jsx-to-stylesheet "1.1.2"
+    babel-plugin-transform-jsx-to-stylesheet "1.2.1"
     babel-plugin-transform-react-jsx "^6.24.1"
     babel-template "^6.26.0"
     babel-traverse "^6.26.0"
     babel-types "^6.26.0"
     babylon "^6.18.0"
+    better-babel-generator "^6.26.1"
     chalk "^2.3.2"
     chokidar "^2.0.3"
     commander "^2.15.0"
     cross-spawn "^6.0.5"
     css-to-react-native-transform "^1.4.0"
     ejs "^2.6.1"
+    envinfo "^6.0.1"
     fs-extra "^5.0.0"
+    generic-names "^2.0.1"
     glob "^7.1.2"
     inquirer "^5.2.0"
     klaw "^2.1.1"
@@ -138,8 +220,15 @@
     minimatch "^3.0.4"
     ora "^2.0.0"
     postcss "^6.0.22"
-    postcss-pxtransform "1.1.2"
+    postcss-modules-extract-imports "^1.1.0"
+    postcss-modules-local-by-default "^1.2.0"
+    postcss-modules-resolve-imports "^1.3.0"
+    postcss-modules-scope "^1.1.0"
+    postcss-modules-values "^1.3.0"
+    postcss-pxtransform "1.2.1"
+    postcss-taro-unit-transform "1.2.1"
     postcss-url "^7.3.2"
+    prettier "^1.14.3"
     prop-types "^15.6.2"
     resolve "^1.6.0"
     semver "^5.5.0"
@@ -148,91 +237,110 @@
     vinyl "^2.1.0"
     vinyl-fs "^3.0.2"
 
-"@tarojs/components@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.npmjs.org/@tarojs/components/-/components-1.1.2.tgz#4ca033c9ee73a23c44a417e175f0c00119e9bd88"
+"@tarojs/components@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/@tarojs/components/-/components-1.2.1.tgz#68c5c2e8097430679046e280dd9e1bd61e298b2f"
   dependencies:
     classnames "^2.2.5"
     nervjs "^1.3.0"
     omit.js "^1.0.0"
     weui "^1.1.2"
 
-"@tarojs/plugin-babel@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.npmjs.org/@tarojs/plugin-babel/-/plugin-babel-1.1.2.tgz#9dde34ea768a40b5e835ce90e2e7f3918707e02f"
+"@tarojs/plugin-babel@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/@tarojs/plugin-babel/-/plugin-babel-1.2.1.tgz#9f85add3b32413347dcc9f65a9d93a3470df6ca5"
   dependencies:
     babel-core "^6.26.0"
 
-"@tarojs/plugin-csso@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.npmjs.org/@tarojs/plugin-csso/-/plugin-csso-1.1.2.tgz#9178b024ef14cd5946eb6f46f48e67ade36681f1"
+"@tarojs/plugin-csso@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/@tarojs/plugin-csso/-/plugin-csso-1.2.1.tgz#2a449c0097590974a82db37102d122fca509bcf6"
   dependencies:
     csso "^3.5.0"
 
-"@tarojs/plugin-typescript@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.npmjs.org/@tarojs/plugin-typescript/-/plugin-typescript-1.1.2.tgz#0621d0c17aa1c71100f434ea25e1a236d3365e63"
+"@tarojs/plugin-typescript@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/@tarojs/plugin-typescript/-/plugin-typescript-1.2.1.tgz#173bbdddde9e95ee363e0fc071eaadb1179e95af"
   dependencies:
     typescript "^2.9.2"
 
-"@tarojs/plugin-uglifyjs@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.npmjs.org/@tarojs/plugin-uglifyjs/-/plugin-uglifyjs-1.1.2.tgz#e54ec5b33754718ac3f7cccb807314503b14b01e"
+"@tarojs/plugin-uglifyjs@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/@tarojs/plugin-uglifyjs/-/plugin-uglifyjs-1.2.1.tgz#2f95a88eb2b4b45547bce4b2ad02a8ac06c2a0d9"
   dependencies:
     uglify-js "^3.3.24"
 
-"@tarojs/redux-h5@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.npmjs.org/@tarojs/redux-h5/-/redux-h5-1.1.2.tgz#9f005cef2f479dcec1e343e6ecae5fa489d0666d"
+"@tarojs/redux-h5@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/@tarojs/redux-h5/-/redux-h5-1.2.1.tgz#2c73313031cd7b8e5da371b71830013b3802a9b5"
   dependencies:
-    "@tarojs/taro-h5" "1.1.2"
     hoist-non-react-statics "^2.5.0"
     invariant "^2.2.4"
     loose-envify "^1.1.0"
     prop-types "^15.6.1"
-    redux "^4.0.0"
 
-"@tarojs/redux@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.npmjs.org/@tarojs/redux/-/redux-1.1.2.tgz#165a25dda53fb14d8936928bb3606dd64274c1f9"
+"@tarojs/redux@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/@tarojs/redux/-/redux-1.2.1.tgz#3f1b78e60ec5b99615d47e11dce18a0e95ea4ffd"
   dependencies:
-    "@tarojs/utils" "1.1.2"
+    "@tarojs/utils" "1.2.1"
 
-"@tarojs/router@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.npmjs.org/@tarojs/router/-/router-1.1.2.tgz#768ba045364fd5a6cd72b9735f803c3d5cf4bcf1"
+"@tarojs/router@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/@tarojs/router/-/router-1.2.1.tgz#7e34ecd4c8d9fd1985f86b1ad4f72310bd4498b3"
   dependencies:
+    invariant "^2.2.4"
+    lodash "^4.17.11"
     resolve-pathname "^2.2.0"
+    rollup-plugin-alias "^1.4.0"
+    value-equal "^0.4.0"
+    warning "^4.0.2"
 
-"@tarojs/taro-h5@1.1.2", "@tarojs/taro-h5@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.npmjs.org/@tarojs/taro-h5/-/taro-h5-1.1.2.tgz#fd636e219f429b79855689df9b2acd9b9b0c4302"
+"@tarojs/taro-h5@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/@tarojs/taro-h5/-/taro-h5-1.2.1.tgz#2d9d57000ba322951e77b38ff4a7fbf6c70096d0"
   dependencies:
-    "@tarojs/taro" "1.1.2"
+    "@tarojs/taro" "1.2.1"
     base64-js "^1.3.0"
     jsonp-retry "^1.0.3"
     mobile-detect "^1.4.2"
     whatwg-fetch "^2.0.4"
 
-"@tarojs/taro-weapp@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.npmjs.org/@tarojs/taro-weapp/-/taro-weapp-1.1.2.tgz#2398bdc843cf8e77b813bc80be45ec0a56cbda18"
+"@tarojs/taro-weapp@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/@tarojs/taro-weapp/-/taro-weapp-1.2.1.tgz#44a79b929fb0367bc3b24bdcd379c12e9589be54"
   dependencies:
-    "@tarojs/taro" "1.1.2"
-    "@tarojs/utils" "1.1.2"
+    "@tarojs/taro" "1.2.1"
+    "@tarojs/utils" "1.2.1"
     lodash "^4.17.10"
     prop-types "^15.6.1"
 
-"@tarojs/taro@1.1.2", "@tarojs/taro@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.npmjs.org/@tarojs/taro/-/taro-1.1.2.tgz#52c53b5fc5a108ac1a9bafcdee9c947e7f51fc9c"
+"@tarojs/taro@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/@tarojs/taro/-/taro-1.2.1.tgz#92f01071bfaf406e068cd5f714b0796fcd334a67"
 
-"@tarojs/transformer-wx@1.1.2":
-  version "1.1.2"
-  resolved "https://registry.npmjs.org/@tarojs/transformer-wx/-/transformer-wx-1.1.2.tgz#da3f2e1dd1b3188e370fd1279e5fe8a17768f4cf"
+"@tarojs/taroize@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/@tarojs/taroize/-/taroize-1.2.1.tgz#2b59c14addefdce133f230c56ddf323b2f22f538"
+  dependencies:
+    "@babel/code-frame" "^7.0.0"
+    babel-core "^6.26.3"
+    babel-generator "^6.26.1"
+    babel-template "^6.26.0"
+    babel-traverse "^6.26.0"
+    babel-types "^6.26.0"
+    babylon "^6.18.0"
+    himalaya-wxml "^1.1.0"
+    lodash "^4.17.5"
+    typescript "^3.0.1"
+
+"@tarojs/transformer-wx@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/@tarojs/transformer-wx/-/transformer-wx-1.2.1.tgz#3c70f50445f66aed61a88ac1655c81e6a17b03c6"
   dependencies:
     "@babel/code-frame" "^7.0.0-beta.44"
     babel-core "^6.26.3"
+    babel-eslint "^10.0.1"
     babel-helper-evaluate-path "^0.5.0"
     babel-helper-mark-eval-scopes "^0.4.3"
     babel-helper-remove-or-void "^0.4.3"
@@ -245,18 +353,20 @@
     babel-plugin-transform-flow-strip-types "^6.22.0"
     babel-traverse "^6.26.0"
     babel-types "^6.26.0"
+    eslint "^5.10.0"
+    eslint-plugin-taro "1.2.1"
     html "^1.0.0"
     lodash "^4.17.5"
     prettier "^1.14.2"
     typescript "^3.0.1"
 
-"@tarojs/utils@1.1.2":
-  version "1.1.2"
-  resolved "https://registry.npmjs.org/@tarojs/utils/-/utils-1.1.2.tgz#f96290f11ae2b98a6fdae7b42b21251a4074a9d6"
+"@tarojs/utils@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/@tarojs/utils/-/utils-1.2.1.tgz#65893d5ee11f65f961e562752f4000d7ba527052"
 
-"@tarojs/webpack-runner@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.npmjs.org/@tarojs/webpack-runner/-/webpack-runner-1.1.2.tgz#4727df80d5f3eb0fe31e2c493973386c5b6ec6c7"
+"@tarojs/webpack-runner@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/@tarojs/webpack-runner/-/webpack-runner-1.2.1.tgz#721c7ad9baec74e0050370bc3f506623de16d725"
   dependencies:
     "@types/lodash" "^4.14.116"
     autoprefixer "^8.6.4"
@@ -267,6 +377,7 @@
     chalk "^2.4.1"
     clean-webpack-plugin "^0.1.19"
     css-loader "^1.0.0"
+    csso-webpack-plugin "^1.0.0-beta.12"
     file-loader "^1.1.11"
     html-webpack-include-assets-plugin "^1.0.5"
     html-webpack-plugin "^3.1.0"
@@ -279,8 +390,10 @@
     ora "^2.1.0"
     postcss-csso "^3.0.0"
     postcss-loader "^2.1.3"
-    postcss-plugin-constparse "1.1.2"
-    postcss-pxtransform "1.1.2"
+    postcss-modules "^1.4.1"
+    postcss-plugin-constparse "1.2.1"
+    postcss-pxtransform "1.2.1"
+    resolve "^1.8.1"
     resolve-url-loader "^2.3.0"
     sass-loader "^7.0.3"
     style-loader "^0.21.0"
@@ -493,9 +606,17 @@ acorn-jsx@^4.1.1:
   dependencies:
     acorn "^5.0.3"
 
+acorn-jsx@^5.0.0:
+  version "5.0.1"
+  resolved "https://registry.npmjs.org/acorn-jsx/-/acorn-jsx-5.0.1.tgz#32a064fd925429216a09b141102bfdd185fae40e"
+
 acorn@^5.0.0, acorn@^5.0.3, acorn@^5.6.0, acorn@^5.6.2:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.1.tgz#f095829297706a7c9776958c0afc8930a9b9d9d8"
+
+acorn@^6.0.2:
+  version "6.0.4"
+  resolved "https://registry.npmjs.org/acorn/-/acorn-6.0.4.tgz#77377e7353b72ec5104550aa2d2097a2fd40b754"
 
 adjust-sourcemap-loader@^1.1.0:
   version "1.2.0"
@@ -538,6 +659,15 @@ ajv@^6.0.1, ajv@^6.1.0, ajv@^6.5.0:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.1"
 
+ajv@^6.5.3, ajv@^6.6.1:
+  version "6.6.2"
+  resolved "https://registry.npmjs.org/ajv/-/ajv-6.6.2.tgz#caceccf474bf3fc3ce3b147443711a24063cc30d"
+  dependencies:
+    fast-deep-equal "^2.0.1"
+    fast-json-stable-stringify "^2.0.0"
+    json-schema-traverse "^0.4.1"
+    uri-js "^4.2.2"
+
 amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
@@ -558,11 +688,15 @@ ansi-regex@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-3.0.0.tgz#ed0317c322064f79466c02966bddb605ab37d998"
 
+ansi-regex@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/ansi-regex/-/ansi-regex-4.0.0.tgz#70de791edf021404c3fd615aa89118ae0432e5a9"
+
 ansi-styles@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-2.2.1.tgz#b432dd3358b634cf75e1e4664368240533c1ddbe"
 
-ansi-styles@^3.2.1:
+ansi-styles@^3.2.0, ansi-styles@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-3.2.1.tgz#41fbb20243e50b12be0f04b8dedbf07520ce841d"
   dependencies:
@@ -687,6 +821,10 @@ assign-symbols@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/assign-symbols/-/assign-symbols-1.0.0.tgz#59667f41fadd4f20ccbc2bb96b8d4f7f78ec0367"
 
+astral-regex@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/astral-regex/-/astral-regex-1.0.0.tgz#6c8c3fb827dd43ee3918f27b82782ab7658a6fd9"
+
 async-each@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/async-each/-/async-each-1.0.1.tgz#19d386a1d9edc6e7c1c85d388aedbcc56d33602d"
@@ -698,6 +836,12 @@ async-foreach@^0.1.3:
 async@^1.5.2:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
+
+async@^2.5.0:
+  version "2.6.1"
+  resolved "https://registry.npmjs.org/async/-/async-2.6.1.tgz#b245a23ca71930044ec53fa46aa00a3e87c6a610"
+  dependencies:
+    lodash "^4.17.10"
 
 asynckit@^0.4.0:
   version "0.4.0"
@@ -787,6 +931,17 @@ babel-core@^6.26.0, babel-core@^6.26.3:
     private "^0.1.8"
     slash "^1.0.0"
     source-map "^0.5.7"
+
+babel-eslint@^10.0.1:
+  version "10.0.1"
+  resolved "https://registry.npmjs.org/babel-eslint/-/babel-eslint-10.0.1.tgz#919681dc099614cd7d31d45c8908695092a1faed"
+  dependencies:
+    "@babel/code-frame" "^7.0.0"
+    "@babel/parser" "^7.0.0"
+    "@babel/traverse" "^7.0.0"
+    "@babel/types" "^7.0.0"
+    eslint-scope "3.7.1"
+    eslint-visitor-keys "^1.0.0"
 
 babel-eslint@^8.2.3:
   version "8.2.6"
@@ -1214,9 +1369,9 @@ babel-plugin-transform-flow-strip-types@^6.22.0:
     babel-plugin-syntax-flow "^6.18.0"
     babel-runtime "^6.22.0"
 
-babel-plugin-transform-jsx-to-stylesheet@1.1.2:
-  version "1.1.2"
-  resolved "https://registry.npmjs.org/babel-plugin-transform-jsx-to-stylesheet/-/babel-plugin-transform-jsx-to-stylesheet-1.1.2.tgz#6064bd5d281cd9476005d571812845711e4225c1"
+babel-plugin-transform-jsx-to-stylesheet@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/babel-plugin-transform-jsx-to-stylesheet/-/babel-plugin-transform-jsx-to-stylesheet-1.2.1.tgz#763fa40c64200f526d28838be786d2b74e27fe91"
 
 babel-plugin-transform-object-rest-spread@^6.26.0:
   version "6.26.0"
@@ -1370,6 +1525,19 @@ bcrypt-pbkdf@^1.0.0:
   resolved "https://registry.yarnpkg.com/bcrypt-pbkdf/-/bcrypt-pbkdf-1.0.2.tgz#a4301d389b6a43f9b67ff3ca11a3f6637e360e9e"
   dependencies:
     tweetnacl "^0.14.3"
+
+better-babel-generator@^6.26.1:
+  version "6.26.1"
+  resolved "https://registry.npmjs.org/better-babel-generator/-/better-babel-generator-6.26.1.tgz#7c26035f32d8d55d06dbc81b410378a6230a515e"
+  dependencies:
+    babel-messages "^6.23.0"
+    babel-runtime "^6.26.0"
+    babel-types "^6.26.0"
+    detect-indent "^4.0.0"
+    jsesc "2"
+    lodash "^4.17.4"
+    source-map "^0.5.7"
+    trim-right "^1.0.1"
 
 big.js@^3.1.3:
   version "3.2.0"
@@ -1679,6 +1847,10 @@ chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.3.0, chalk@^2.3.1, chalk@^2.3
 chardet@^0.4.0:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.4.2.tgz#b5473b33dc97c424e5d98dc87d55d4d8a29c8bf2"
+
+chardet@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.npmjs.org/chardet/-/chardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
 
 chokidar@^2.0.0, chokidar@^2.0.2, chokidar@^2.0.3:
   version "2.0.4"
@@ -2084,6 +2256,17 @@ css-mediaquery@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/css-mediaquery/-/css-mediaquery-0.1.2.tgz#6a2c37344928618631c54bd33cedd301da18bea0"
 
+css-modules-loader-core@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/css-modules-loader-core/-/css-modules-loader-core-1.1.0.tgz#5908668294a1becd261ae0a4ce21b0b551f21d16"
+  dependencies:
+    icss-replace-symbols "1.1.0"
+    postcss "6.0.1"
+    postcss-modules-extract-imports "1.1.0"
+    postcss-modules-local-by-default "1.2.0"
+    postcss-modules-scope "1.1.0"
+    postcss-modules-values "1.3.0"
+
 css-parse@1.7.x:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/css-parse/-/css-parse-1.7.0.tgz#321f6cf73782a6ff751111390fc05e2c657d8c9b"
@@ -2161,7 +2344,16 @@ cssesc@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-0.1.0.tgz#c814903e45623371a0477b40109aaafbeeaddbb4"
 
-csso@^3.5.0:
+csso-webpack-plugin@^1.0.0-beta.12:
+  version "1.0.0-beta.12"
+  resolved "https://registry.npmjs.org/csso-webpack-plugin/-/csso-webpack-plugin-1.0.0-beta.12.tgz#a42d02f74043eb8e7f303c9ba27bbb65c78972b8"
+  dependencies:
+    async "^2.5.0"
+    csso "^3.4.0"
+    source-map "^0.6.1"
+    webpack-sources "^1.0.1"
+
+csso@^3.4.0, csso@^3.5.0:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/csso/-/csso-3.5.1.tgz#7b9eb8be61628973c1b261e169d2f024008e758b"
   dependencies:
@@ -2218,6 +2410,12 @@ debug@2.6.9, debug@^2.1.1, debug@^2.1.2, debug@^2.2.0, debug@^2.3.3, debug@^2.6.
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
   dependencies:
     ms "2.0.0"
+
+debug@^4.0.1, debug@^4.1.0:
+  version "4.1.1"
+  resolved "https://registry.npmjs.org/debug/-/debug-4.1.1.tgz#3b72260255109c6b589cee050f1d516139664791"
+  dependencies:
+    ms "^2.1.1"
 
 decamelize@^1.1.1, decamelize@^1.1.2:
   version "1.2.0"
@@ -2525,6 +2723,10 @@ entities@~1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/entities/-/entities-1.1.1.tgz#6e5c2d0a5621b5dadaecef80b90edfb5cd7772f0"
 
+envinfo@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.npmjs.org/envinfo/-/envinfo-6.0.1.tgz#dec51f2dd38fb4a1fb5bf568488c06ad1e7e08a7"
+
 errno@^0.1.1, errno@^0.1.3, errno@~0.1.7:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/errno/-/errno-0.1.7.tgz#4684d71779ad39af177e3f007996f7c67c852618"
@@ -2636,6 +2838,12 @@ eslint-plugin-taro@1.1.2:
   dependencies:
     has "^1.0.1"
 
+eslint-plugin-taro@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/eslint-plugin-taro/-/eslint-plugin-taro-1.2.1.tgz#82dca5acd3f2dddaf5a2e790b8a745db7948b042"
+  dependencies:
+    has "^1.0.1"
+
 eslint-scope@3.7.1:
   version "3.7.1"
   resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-3.7.1.tgz#3d63c3edfda02e06e01a452ad88caacc7cdcb6e8"
@@ -2657,6 +2865,48 @@ eslint-utils@^1.3.1:
 eslint-visitor-keys@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
+
+eslint@^5.10.0:
+  version "5.11.0"
+  resolved "https://registry.npmjs.org/eslint/-/eslint-5.11.0.tgz#51a0e70f137a425fe044cd48273b96f28a774b1f"
+  dependencies:
+    "@babel/code-frame" "^7.0.0"
+    ajv "^6.5.3"
+    chalk "^2.1.0"
+    cross-spawn "^6.0.5"
+    debug "^4.0.1"
+    doctrine "^2.1.0"
+    eslint-scope "^4.0.0"
+    eslint-utils "^1.3.1"
+    eslint-visitor-keys "^1.0.0"
+    espree "^5.0.0"
+    esquery "^1.0.1"
+    esutils "^2.0.2"
+    file-entry-cache "^2.0.0"
+    functional-red-black-tree "^1.0.1"
+    glob "^7.1.2"
+    globals "^11.7.0"
+    ignore "^4.0.6"
+    imurmurhash "^0.1.4"
+    inquirer "^6.1.0"
+    js-yaml "^3.12.0"
+    json-stable-stringify-without-jsonify "^1.0.1"
+    levn "^0.3.0"
+    lodash "^4.17.5"
+    minimatch "^3.0.4"
+    mkdirp "^0.5.1"
+    natural-compare "^1.4.0"
+    optionator "^0.8.2"
+    path-is-inside "^1.0.2"
+    pluralize "^7.0.0"
+    progress "^2.0.0"
+    regexpp "^2.0.1"
+    require-uncached "^1.0.3"
+    semver "^5.5.1"
+    strip-ansi "^4.0.0"
+    strip-json-comments "^2.0.1"
+    table "^5.0.2"
+    text-table "^0.2.0"
 
 eslint@^5.2.0:
   version "5.2.0"
@@ -2708,6 +2958,14 @@ espree@^4.0.0:
   dependencies:
     acorn "^5.6.0"
     acorn-jsx "^4.1.1"
+
+espree@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.npmjs.org/espree/-/espree-5.0.0.tgz#fc7f984b62b36a0f543b13fb9cd7b9f4a7f5b65c"
+  dependencies:
+    acorn "^6.0.2"
+    acorn-jsx "^5.0.0"
+    eslint-visitor-keys "^1.0.0"
 
 esprima@^4.0.0:
   version "4.0.1"
@@ -2844,6 +3102,14 @@ external-editor@^2.1.0:
   dependencies:
     chardet "^0.4.0"
     iconv-lite "^0.4.17"
+    tmp "^0.0.33"
+
+external-editor@^3.0.0:
+  version "3.0.3"
+  resolved "https://registry.npmjs.org/external-editor/-/external-editor-3.0.3.tgz#5866db29a97826dbe4bf3afd24070ead9ea43a27"
+  dependencies:
+    chardet "^0.7.0"
+    iconv-lite "^0.4.24"
     tmp "^0.0.33"
 
 extglob@^2.0.4:
@@ -3137,6 +3403,18 @@ gaze@^1.0.0:
   dependencies:
     globule "^1.0.0"
 
+generic-names@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.npmjs.org/generic-names/-/generic-names-1.0.3.tgz#2d786a121aee508876796939e8e3bff836c20917"
+  dependencies:
+    loader-utils "^0.2.16"
+
+generic-names@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/generic-names/-/generic-names-2.0.1.tgz#f8a378ead2ccaa7a34f0317b05554832ae41b872"
+  dependencies:
+    loader-utils "^1.1.0"
+
 get-caller-file@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-1.0.3.tgz#f978fa4c90d1dfe7ff2d6beda2a515e713bdcf4a"
@@ -3416,6 +3694,10 @@ he@1.1.x:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/he/-/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
 
+himalaya-wxml@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/himalaya-wxml/-/himalaya-wxml-1.1.0.tgz#85d0341af1c5f53f3b021be8e4be890cc8b4d7af"
+
 hmac-drbg@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
@@ -3580,7 +3862,13 @@ iconv-lite@^0.4.17, iconv-lite@^0.4.4, iconv-lite@~0.4.13:
   dependencies:
     safer-buffer ">= 2.1.2 < 3"
 
-icss-replace-symbols@^1.1.0:
+iconv-lite@^0.4.24:
+  version "0.4.24"
+  resolved "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
+  dependencies:
+    safer-buffer ">= 2.1.2 < 3"
+
+icss-replace-symbols@1.1.0, icss-replace-symbols@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/icss-replace-symbols/-/icss-replace-symbols-1.1.0.tgz#06ea6f83679a7749e386cfe1fe812ae5db223ded"
 
@@ -3589,6 +3877,12 @@ icss-utils@^2.1.0:
   resolved "https://registry.yarnpkg.com/icss-utils/-/icss-utils-2.1.0.tgz#83f0a0ec378bf3246178b6c2ad9136f135b1c962"
   dependencies:
     postcss "^6.0.1"
+
+icss-utils@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.npmjs.org/icss-utils/-/icss-utils-3.0.1.tgz#ee70d3ae8cac38c6be5ed91e851b27eed343ad0f"
+  dependencies:
+    postcss "^6.0.2"
 
 ieee754@^1.1.11, ieee754@^1.1.4:
   version "1.1.12"
@@ -3611,6 +3905,10 @@ ignore@^3.3.5:
 ignore@^4.0.2:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-4.0.3.tgz#e2d58c9654d75b542529fa28d80ac95b29e4f467"
+
+ignore@^4.0.6:
+  version "4.0.6"
+  resolved "https://registry.npmjs.org/ignore/-/ignore-4.0.6.tgz#750e3db5862087b4737ebac8207ffd1ef27b25fc"
 
 image-size@~0.5.0:
   version "0.5.5"
@@ -3688,6 +3986,24 @@ inquirer@^5.2.0:
     rxjs "^5.5.2"
     string-width "^2.1.0"
     strip-ansi "^4.0.0"
+    through "^2.3.6"
+
+inquirer@^6.1.0:
+  version "6.2.1"
+  resolved "https://registry.npmjs.org/inquirer/-/inquirer-6.2.1.tgz#9943fc4882161bdb0b0c9276769c75b32dbfcd52"
+  dependencies:
+    ansi-escapes "^3.0.0"
+    chalk "^2.0.0"
+    cli-cursor "^2.1.0"
+    cli-width "^2.0.0"
+    external-editor "^3.0.0"
+    figures "^2.0.0"
+    lodash "^4.17.10"
+    mute-stream "0.0.7"
+    run-async "^2.2.0"
+    rxjs "^6.1.0"
+    string-width "^2.1.0"
+    strip-ansi "^5.0.0"
     through "^2.3.6"
 
 internal-ip@1.2.0:
@@ -4002,13 +4318,13 @@ js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
 
-"js-tokens@^3.0.0 || ^4.0.0":
+"js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
 
-js-yaml@^3.11.0, js-yaml@^3.7.0, js-yaml@^3.9.0:
+js-yaml@^3.11.0, js-yaml@^3.12.0, js-yaml@^3.7.0, js-yaml@^3.9.0:
   version "3.12.0"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.12.0.tgz#eaed656ec8344f10f527c6bfa1b6e2244de167d1"
+  resolved "https://registry.npmjs.org/js-yaml/-/js-yaml-3.12.0.tgz#eaed656ec8344f10f527c6bfa1b6e2244de167d1"
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
@@ -4016,6 +4332,10 @@ js-yaml@^3.11.0, js-yaml@^3.7.0, js-yaml@^3.9.0:
 jsbn@~0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-0.1.1.tgz#a5e654c2e5a2deb5f201d96cefbca80c0ef2f513"
+
+jsesc@2:
+  version "2.5.2"
+  resolved "https://registry.npmjs.org/jsesc/-/jsesc-2.5.2.tgz#80564d2e483dacf6e8ef209650a67df3f0c283a4"
 
 jsesc@^1.3.0:
   version "1.3.0"
@@ -4355,6 +4675,10 @@ lodash@^4.0.0, lodash@^4.17.10, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, 
   version "4.17.10"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
 
+lodash@^4.17.11:
+  version "4.17.11"
+  resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
+
 log-symbols@^2.1.0, log-symbols@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/log-symbols/-/log-symbols-2.2.0.tgz#5740e1c5d6f0dfda4ad9323b5332107ef6b4c40a"
@@ -4662,6 +4986,10 @@ move-concurrently@^1.0.1:
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
+
+ms@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.npmjs.org/ms/-/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
 
 multicast-dns-service-types@^1.1.0:
   version "1.1.0"
@@ -5228,6 +5556,10 @@ path-parse@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.5.tgz#3c1adf871ea9cd6c9431b6ea2bd74a0ff055c4c1"
 
+path-parse@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.npmjs.org/path-parse/-/path-parse-1.0.6.tgz#d62dbb5679405d72c4737ec58600e9ddcf06d24c"
+
 path-to-regexp@0.1.7:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-0.1.7.tgz#df604178005f522f15eb4490e7247a1bfaa67f8c"
@@ -5339,36 +5671,66 @@ postcss-loader@^2.1.3:
     postcss-load-config "^2.0.0"
     schema-utils "^0.4.0"
 
+postcss-modules-extract-imports@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/postcss-modules-extract-imports/-/postcss-modules-extract-imports-1.1.0.tgz#b614c9720be6816eaee35fb3a5faa1dba6a05ddb"
+  dependencies:
+    postcss "^6.0.1"
+
+postcss-modules-extract-imports@^1.1.0:
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/postcss-modules-extract-imports/-/postcss-modules-extract-imports-1.2.1.tgz#dc87e34148ec7eab5f791f7cd5849833375b741a"
+  dependencies:
+    postcss "^6.0.1"
+
 postcss-modules-extract-imports@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/postcss-modules-extract-imports/-/postcss-modules-extract-imports-1.2.0.tgz#66140ecece38ef06bf0d3e355d69bf59d141ea85"
   dependencies:
     postcss "^6.0.1"
 
-postcss-modules-local-by-default@^1.2.0:
+postcss-modules-local-by-default@1.2.0, postcss-modules-local-by-default@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/postcss-modules-local-by-default/-/postcss-modules-local-by-default-1.2.0.tgz#f7d80c398c5a393fa7964466bd19500a7d61c069"
   dependencies:
     css-selector-tokenizer "^0.7.0"
     postcss "^6.0.1"
 
-postcss-modules-scope@^1.1.0:
+postcss-modules-resolve-imports@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.npmjs.org/postcss-modules-resolve-imports/-/postcss-modules-resolve-imports-1.3.0.tgz#398d3000b95ae969420cdf4cd83fa8067f1c5eae"
+  dependencies:
+    css-selector-tokenizer "^0.7.0"
+    icss-utils "^3.0.1"
+    minimist "^1.2.0"
+
+postcss-modules-scope@1.1.0, postcss-modules-scope@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/postcss-modules-scope/-/postcss-modules-scope-1.1.0.tgz#d6ea64994c79f97b62a72b426fbe6056a194bb90"
   dependencies:
     css-selector-tokenizer "^0.7.0"
     postcss "^6.0.1"
 
-postcss-modules-values@^1.3.0:
+postcss-modules-values@1.3.0, postcss-modules-values@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/postcss-modules-values/-/postcss-modules-values-1.3.0.tgz#ecffa9d7e192518389f42ad0e83f72aec456ea20"
   dependencies:
     icss-replace-symbols "^1.1.0"
     postcss "^6.0.1"
 
-postcss-plugin-constparse@1.1.2:
-  version "1.1.2"
-  resolved "https://registry.npmjs.org/postcss-plugin-constparse/-/postcss-plugin-constparse-1.1.2.tgz#51457b2b1e08678c3eec965f7fda361b1c72c2c5"
+postcss-modules@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.npmjs.org/postcss-modules/-/postcss-modules-1.4.1.tgz#8aa35bd3461db67e27377a7ce770d77b654a84ef"
+  dependencies:
+    css-modules-loader-core "^1.1.0"
+    generic-names "^1.0.3"
+    lodash.camelcase "^4.3.0"
+    postcss "^7.0.1"
+    string-hash "^1.1.1"
+
+postcss-plugin-constparse@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/postcss-plugin-constparse/-/postcss-plugin-constparse-1.2.1.tgz#f61114e0d41b9a34c729e7ae1649170d61f1584a"
   dependencies:
     postcss "^6.0.22"
 
@@ -5379,12 +5741,18 @@ postcss-pxtorem@^4.0.1:
     object-assign "^4.1.0"
     postcss "^5.2.10"
 
-postcss-pxtransform@1.1.2:
-  version "1.1.2"
-  resolved "https://registry.npmjs.org/postcss-pxtransform/-/postcss-pxtransform-1.1.2.tgz#96348a8f8b587b2b347873a20c3855d4a71cc6c9"
+postcss-pxtransform@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/postcss-pxtransform/-/postcss-pxtransform-1.2.1.tgz#49fd17e587a29979f8f070e94b26c6dbe296032e"
   dependencies:
     postcss "^6.0.16"
     postcss-pxtorem "^4.0.1"
+
+postcss-taro-unit-transform@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/postcss-taro-unit-transform/-/postcss-taro-unit-transform-1.2.1.tgz#284b71ea79d6213b49167e2f7fe5f2c376f294b1"
+  dependencies:
+    postcss "^6.0.21"
 
 postcss-url@^7.3.2:
   version "7.3.2"
@@ -5400,6 +5768,14 @@ postcss-value-parser@^3.2.3, postcss-value-parser@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-3.3.0.tgz#87f38f9f18f774a4ab4c8a232f5c5ce8872a9d15"
 
+postcss@6.0.1:
+  version "6.0.1"
+  resolved "https://registry.npmjs.org/postcss/-/postcss-6.0.1.tgz#000dbd1f8eef217aa368b9a212c5fc40b2a8f3f2"
+  dependencies:
+    chalk "^1.1.3"
+    source-map "^0.5.6"
+    supports-color "^3.2.3"
+
 postcss@^5.2.10:
   version "5.2.18"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-5.2.18.tgz#badfa1497d46244f6390f58b319830d9107853c5"
@@ -5409,13 +5785,21 @@ postcss@^5.2.10:
     source-map "^0.5.6"
     supports-color "^3.2.3"
 
-postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.16, postcss@^6.0.22, postcss@^6.0.23:
+postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.16, postcss@^6.0.2, postcss@^6.0.21, postcss@^6.0.22, postcss@^6.0.23:
   version "6.0.23"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.23.tgz#61c82cc328ac60e677645f979054eb98bc0e3324"
   dependencies:
     chalk "^2.4.1"
     source-map "^0.6.1"
     supports-color "^5.4.0"
+
+postcss@^7.0.1:
+  version "7.0.7"
+  resolved "https://registry.npmjs.org/postcss/-/postcss-7.0.7.tgz#2754d073f77acb4ef08f1235c36c5721a7201614"
+  dependencies:
+    chalk "^2.4.1"
+    source-map "^0.6.1"
+    supports-color "^5.5.0"
 
 prelude-ls@~1.1.2:
   version "1.1.2"
@@ -5428,6 +5812,10 @@ prepend-http@^2.0.0:
 prettier@^1.14.2:
   version "1.15.1"
   resolved "https://registry.npmjs.org/prettier/-/prettier-1.15.1.tgz#06c67106afb1b40e74b002353b2079cc7e0e67bf"
+
+prettier@^1.14.3:
+  version "1.15.3"
+  resolved "https://registry.npmjs.org/prettier/-/prettier-1.15.3.tgz#1feaac5bdd181237b54dbe65d874e02a1472786a"
 
 pretty-error@^2.0.2:
   version "2.1.1"
@@ -5732,6 +6120,10 @@ regexpp@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/regexpp/-/regexpp-1.1.0.tgz#0e3516dd0b7904f413d2d4193dce4618c3a689ab"
 
+regexpp@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/regexpp/-/regexpp-2.0.1.tgz#8d19d31cf632482b589049f8281f93dbcba4d07f"
+
 regexpu-core@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/regexpu-core/-/regexpu-core-1.0.0.tgz#86a763f58ee4d7c2f6b102e4764050de7ed90c6b"
@@ -5949,6 +6341,12 @@ resolve@^1.1.6, resolve@^1.3.2, resolve@^1.5.0, resolve@^1.6.0:
   dependencies:
     path-parse "^1.0.5"
 
+resolve@^1.8.1:
+  version "1.9.0"
+  resolved "https://registry.npmjs.org/resolve/-/resolve-1.9.0.tgz#a14c6fdfa8f92a7df1d996cb7105fa744658ea06"
+  dependencies:
+    path-parse "^1.0.6"
+
 responselike@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/responselike/-/responselike-1.0.2.tgz#918720ef3b631c5642be068f15ade5a46f4ba1e7"
@@ -5990,6 +6388,12 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
+rollup-plugin-alias@^1.4.0:
+  version "1.5.1"
+  resolved "https://registry.npmjs.org/rollup-plugin-alias/-/rollup-plugin-alias-1.5.1.tgz#80cce3a967befda5b09c86abc14a043a78035b46"
+  dependencies:
+    slash "^2.0.0"
+
 run-async@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/run-async/-/run-async-2.3.0.tgz#0371ab4ae0bdd720d4166d7dfda64ff7a445a6c0"
@@ -6007,6 +6411,12 @@ rxjs@^5.5.2:
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.5.11.tgz#f733027ca43e3bec6b994473be4ab98ad43ced87"
   dependencies:
     symbol-observable "1.0.1"
+
+rxjs@^6.1.0:
+  version "6.3.3"
+  resolved "https://registry.npmjs.org/rxjs/-/rxjs-6.3.3.tgz#3c6a7fa420e844a81390fb1158a9ec614f4bad55"
+  dependencies:
+    tslib "^1.9.0"
 
 safe-buffer@5.1.1:
   version "5.1.1"
@@ -6081,6 +6491,10 @@ selfsigned@^1.9.1:
 "semver@2 || 3 || 4 || 5", semver@5.5.0, semver@^5.3.0, semver@^5.5.0:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.5.0.tgz#dc4bbc7a6ca9d916dee5d43516f0092b58f7b8ab"
+
+semver@^5.5.1:
+  version "5.6.0"
+  resolved "https://registry.npmjs.org/semver/-/semver-5.6.0.tgz#7e74256fbaa49c75aa7c7a205cc22799cac80004"
 
 semver@~5.3.0:
   version "5.3.0"
@@ -6216,6 +6630,14 @@ slice-ansi@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slice-ansi/-/slice-ansi-1.0.0.tgz#044f1a49d8842ff307aad6b505ed178bd950134d"
   dependencies:
+    is-fullwidth-code-point "^2.0.0"
+
+slice-ansi@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/slice-ansi/-/slice-ansi-2.0.0.tgz#5373bdb8559b45676e8541c66916cdd6251612e7"
+  dependencies:
+    ansi-styles "^3.2.0"
+    astral-regex "^1.0.0"
     is-fullwidth-code-point "^2.0.0"
 
 snapdragon-node@^2.0.1:
@@ -6448,6 +6870,10 @@ strict-uri-encode@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz#279b225df1d582b1f54e65addd4352e18faa0713"
 
+string-hash@^1.1.1:
+  version "1.1.3"
+  resolved "https://registry.npmjs.org/string-hash/-/string-hash-1.1.3.tgz#e8aafc0ac1855b4666929ed7dd1275df5d6c811b"
+
 string-width@^1.0.1, string-width@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-1.0.2.tgz#118bdf5b8cdc51a2a7e70d211e07e2b0b9b107d3"
@@ -6498,6 +6924,12 @@ strip-ansi@^4.0.0:
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-4.0.0.tgz#a8479022eb1ac368a871389b635262c505ee368f"
   dependencies:
     ansi-regex "^3.0.0"
+
+strip-ansi@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.npmjs.org/strip-ansi/-/strip-ansi-5.0.0.tgz#f78f68b5d0866c20b2c9b8c61b5298508dc8756f"
+  dependencies:
+    ansi-regex "^4.0.0"
 
 strip-bom-stream@^2.0.0:
   version "2.0.0"
@@ -6572,6 +7004,12 @@ supports-color@^5.1.0, supports-color@^5.3.0, supports-color@^5.4.0:
   dependencies:
     has-flag "^3.0.0"
 
+supports-color@^5.5.0:
+  version "5.5.0"
+  resolved "https://registry.npmjs.org/supports-color/-/supports-color-5.5.0.tgz#e2e69a44ac8772f78a1ec0b35b689df6530efc8f"
+  dependencies:
+    has-flag "^3.0.0"
+
 symbol-observable@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.0.1.tgz#8340fc4702c3122df5d22288f88283f513d3fdd4"
@@ -6589,6 +7027,15 @@ table@^4.0.3:
     chalk "^2.1.0"
     lodash "^4.17.4"
     slice-ansi "1.0.0"
+    string-width "^2.1.1"
+
+table@^5.0.2:
+  version "5.1.1"
+  resolved "https://registry.npmjs.org/table/-/table-5.1.1.tgz#92030192f1b7b51b6eeab23ed416862e47b70837"
+  dependencies:
+    ajv "^6.6.1"
+    lodash "^4.17.11"
+    slice-ansi "2.0.0"
     string-width "^2.1.1"
 
 tapable@^1.0.0:
@@ -6927,9 +7374,9 @@ upper-case@^1.1.1:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/upper-case/-/upper-case-1.1.3.tgz#f6b4501c2ec4cdd26ba78be7222961de77621598"
 
-uri-js@^4.2.1:
+uri-js@^4.2.1, uri-js@^4.2.2:
   version "4.2.2"
-  resolved "https://registry.yarnpkg.com/uri-js/-/uri-js-4.2.2.tgz#94c540e1ff772956e2299507c010aea6c8838eb0"
+  resolved "https://registry.npmjs.org/uri-js/-/uri-js-4.2.2.tgz#94c540e1ff772956e2299507c010aea6c8838eb0"
   dependencies:
     punycode "^2.1.0"
 
@@ -7023,6 +7470,10 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
+value-equal@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.npmjs.org/value-equal/-/value-equal-0.4.0.tgz#c5bdd2f54ee093c04839d71ce2e4758a6890abc7"
+
 value-or-function@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/value-or-function/-/value-or-function-3.0.0.tgz#1c243a50b595c1be54a754bfece8563b9ff8d813"
@@ -7108,6 +7559,12 @@ vm-browserify@0.0.4:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-0.0.4.tgz#5d7ea45bbef9e4a6ff65f95438e0a87c357d5a73"
   dependencies:
     indexof "0.0.1"
+
+warning@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.npmjs.org/warning/-/warning-4.0.2.tgz#aa6876480872116fa3e11d434b0d0d8d91e44607"
+  dependencies:
+    loose-envify "^1.0.0"
 
 watchpack@^1.5.0:
   version "1.6.0"

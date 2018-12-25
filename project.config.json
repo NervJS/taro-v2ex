@@ -1,6 +1,6 @@
 {
-	"miniprogramRoot": "./dist",
-	"projectname": "v2ex",
+	"miniprogramRoot": "dist/",
+	"projectname": "taro-v2ex",
 	"description": "v2ex-taro",
 	"appid": "touristappid",
 	"setting": {
