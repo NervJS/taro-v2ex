@@ -35,7 +35,7 @@ class ThreadList extends Component<IProps, {}> {
       return <Loading />
     }
 
-    const element = threads.map((thread) => {
+    const element = threads.map((thread, index) => {
       return (
         <Thread
           key={thread.id}
