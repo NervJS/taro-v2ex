@@ -1,4 +1,7 @@
-const HOST_URI = 'https://www.v2ex.com/api/'
+// 是否是h5
+const h5 = 'h5'
+const isH5 = process.env.CLIENT_ENV === h5
+const HOST_URI = isH5 ? 'http://127.0.0.1:10086/api/' : 'https://www.v2ex.com/api/'
 
 // 获取节点
 // 所有的节点

@@ -14,18 +14,18 @@ class App extends Component {
     ],
     tabBar: {
       list: [{
-        'iconPath': 'resource/latest.png',
-        'selectedIconPath': 'resource/lastest_on.png',
+        iconPath: 'resource/latest.png',
+        selectedIconPath: 'resource/lastest_on.png',
         pagePath: 'pages/index/index',
         text: '最新'
       }, {
-        'iconPath': 'resource/hotest.png',
-        'selectedIconPath': 'resource/hotest_on.png',
+        iconPath: 'resource/hotest.png',
+        selectedIconPath: 'resource/hotest_on.png',
         pagePath: 'pages/hot/hot',
         text: '热门'
       }, {
-        'iconPath': 'resource/node.png',
-        'selectedIconPath': 'resource/node_on.png',
+        iconPath: 'resource/node.png',
+        selectedIconPath: 'resource/node_on.png',
         pagePath: 'pages/nodes/nodes',
         text: '节点'
       }],
