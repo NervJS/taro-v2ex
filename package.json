@@ -8,7 +8,7 @@
 		"build:weapp": "taro build --type weapp",
 		"build:h5": "taro build --type h5",
 		"dev:weapp": "npm run build:weapp -- --watch",
-		"dev:h5": "npm run build:h5 -- --watch",
+		"dev:h5": "cross-env CLIENT_ENV=h5 npm run build:h5 -- --watch",
 		"test": "eslint src/ --ext .tsx"
 	},
 	"author": "",
@@ -47,6 +47,7 @@
 		"babel-plugin-transform-decorators-legacy": "^1.3.4",
 		"babel-plugin-transform-object-rest-spread": "^6.26.0",
 		"babel-preset-env": "^1.6.1",
+		"cross-env": "^6.0.3",
 		"eslint": "^5.2.0",
 		"eslint-config-taro": "1.2.26",
 		"eslint-plugin-import": "^2.12.0",
