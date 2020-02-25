@@ -1,11 +1,12 @@
-import Taro, { Component } from '@tarojs/taro'
+import Taro from '@tarojs/taro'
+import React from 'react'
 import { View, Text, Navigator } from '@tarojs/components'
 import allNodes from './all_node'
 import api from '../../utils/api'
 
 import './nodes.css'
 
-class Nodes extends Component<{}, {}> {
+class Nodes extends React.Component<{}, {}> {
   config = {
     navigationBarTitleText: '节点'
   }

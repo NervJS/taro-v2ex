@@ -1,4 +1,5 @@
-import Taro, { Component } from '@tarojs/taro'
+import Taro from '@tarojs/taro'
+import React from 'react'
 import { View } from '@tarojs/components'
 import { ThreadList } from '../../components/thread_list'
 import { IThread } from '../../interfaces/thread'
@@ -11,7 +12,7 @@ interface IState {
   threads: IThread[]
 }
 
-class Index extends Component<{}, IState> {
+class Index extends React.Component<{}, IState> {
   config = {
     navigationBarTitleText: '首页'
   }

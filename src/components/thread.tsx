@@ -1,4 +1,5 @@
-import Taro, { Component, eventCenter } from '@tarojs/taro'
+import Taro, { eventCenter } from '@tarojs/taro'
+import React from 'react'
 import { View, Text, Navigator, Image } from '@tarojs/components'
 
 import api from '../utils/api'
@@ -19,7 +20,7 @@ interface IProps {
   not_navi?: boolean // 不导航到 detail
 }
 
-class Thread extends Component<IProps, {}> {
+class Thread extends React.Component<IProps, {}> {
 
   handleNavigate = () => {
     // 这里必须显式指名 this.props 包含 tid

@@ -1,4 +1,5 @@
-import Taro, { Component } from '@tarojs/taro'
+import Taro from '@tarojs/taro'
+import React from 'react'
 import { View } from '@tarojs/components'
 import { ThreadList } from '../../components/thread_list'
 import { IThread } from '../../interfaces/thread'
@@ -11,11 +12,7 @@ interface IState {
   threads: IThread[]
 }
 
-class Hot extends Component<{}, IState> {
-  config = {
-    navigationBarTitleText: '热门'
-  }
-
+class Hot extends React.Component<{}, IState> {
   state = {
     loading: true,
     threads: []

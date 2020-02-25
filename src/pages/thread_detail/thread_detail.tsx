@@ -1,4 +1,5 @@
-import Taro, { Component } from '@tarojs/taro'
+import Taro from '@tarojs/taro'
+import React from 'react'
 import { View, RichText, Image } from '@tarojs/components'
 import { Thread } from '../../components/thread'
 import { Loading } from '../../components/loading'
@@ -27,7 +28,7 @@ function prettyHTML (str: string) {
   return str.replace(/<img/gi, '<img class="img"')
 }
 
-class ThreadDetail extends Component<{}, IState> {
+class ThreadDetail extends React.Component<{}, IState> {
   state = {
     loading: true,
     replies: [],

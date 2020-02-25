@@ -1,4 +1,5 @@
-import Taro, { Component } from '@tarojs/taro'
+import Taro, { Current } from '@tarojs/taro'
+import React from 'react'
 import { View } from '@tarojs/components'
 import { ThreadList } from '../../components/thread_list'
 import { IThread } from '../../interfaces/thread'
@@ -11,21 +12,21 @@ interface IState {
   threads: IThread[]
 }
 
-class NodeDetail extends Component<{}, IState> {
+class NodeDetail extends React.Component<{}, IState> {
   state = {
     loading: true,
     threads: []
   }
 
   componentWillMount () {
-    const { full_name } = this.$router.params
+    const { full_name } = Current.router.params
     Taro.setNavigationBarTitle({
       title: decodeURI(full_name)
     })
   }
 
   async componentDidMount () {
-    const { short_name } = this.$router.params
+    const { short_name } = Current.router.params
     try {
       const { data: { id } } = await Taro.request({
         url: api.getNodeInfo({
