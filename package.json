@@ -14,15 +14,18 @@
 	"author": "",
 	"license": "MIT",
 	"dependencies": {
+		"@babel/runtime": "^7.8.4",
 		"@tarojs/components": "^3.0.0-alpha.5",
 		"@tarojs/react": "^3.0.0-alpha.5",
 		"@tarojs/runtime": "^3.0.0-alpha.5",
 		"@tarojs/taro": "^3.0.0-alpha.5",
-		"react": "^16.12.0",
-		"timeago.js": "^3.0.2"
+		"core-js": "^3.6.4",
+		"timeago.js": "^3.0.2",
+		"vue": "^2.6.11"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.8.0",
+		"@babel/preset-typescript": "^7.8.3",
 		"@tarojs/mini-runner": "^3.0.0-alpha.5",
 		"@types/node": "^10.5.8",
 		"@types/react": "^16.4.8",

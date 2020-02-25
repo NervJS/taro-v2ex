@@ -12,7 +12,8 @@ export default {
       'selectedIconPath': 'resource/lastest_on.png',
       pagePath: 'pages/index/index',
       text: '最新'
-    }, {
+    },
+    {
       'iconPath': 'resource/hotest.png',
       'selectedIconPath': 'resource/hotest_on.png',
       pagePath: 'pages/hot/hot',
