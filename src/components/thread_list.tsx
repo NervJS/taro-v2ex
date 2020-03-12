@@ -5,8 +5,6 @@ import { Loading } from './loading'
 import { IMember } from '../interfaces/member'
 import { INode } from '../interfaces/node'
 
-import './thread.css'
-
 interface IProps {
   threads: IThread[],
   loading: boolean
